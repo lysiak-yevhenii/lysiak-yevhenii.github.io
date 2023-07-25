@@ -18,6 +18,7 @@ function App () {
         <p>
           Lysiak Yevhenii
         </p>
+        <p>{process.env.REACT_APP_GIT_CLIENT_ID}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
