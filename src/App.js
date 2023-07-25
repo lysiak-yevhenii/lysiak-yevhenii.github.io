@@ -10,15 +10,21 @@ import './App.css';
 
 
 function App () {
+  const CLIENT_ID = process.env.REACT_APP_GIT_CLIENT_ID;
 
+  const loginWithGithub = () => {
+    window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <button onClick={loginWithGithub}>
+          Login With Github
+        </button>
         <p>
           Lysiak Yevhenii
         </p>
-        <p>{process.env.REACT_APP_GIT_CLIENT_ID}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
