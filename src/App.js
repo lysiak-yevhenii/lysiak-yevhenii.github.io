@@ -30,7 +30,7 @@ function App () {
   const access_token_request = () => {
     const params = '?client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET + '&code=' + code;
 
-    fetch('https://github.com/login/oauth/access_token' + params, { method: 'POST', headers: { "Accept": "application/json" } }).then(response => {
+    fetch('https://github.com/login/oauth/access_token' + params, { mode: 'no-cors', method: 'POST', headers: { "Accept": "application/json" } }).then(response => {
       return response.json();
     }).then(data => {
       console.log(data);
@@ -48,7 +48,7 @@ function App () {
           Login With Github
         </button>
         {code && <button onClick={() => access_token_request()}>
-
+          Access Token
         </button>}
         <p>
           Lysiak Yevhenii
