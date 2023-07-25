@@ -1,13 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+// Forward the user to github login screen (we pass in the client ID)
+// User in now on the github side and logs in (github/login)
+// When user decides to login they get forwarded back to localhost:3000
+// But localhost:3000/?code = codehere
+// Use the code to get the access token (code can only be used once)
+
+
+
+function App () {
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lysiak Yevhenii
         </p>
         <a
           className="App-link"
