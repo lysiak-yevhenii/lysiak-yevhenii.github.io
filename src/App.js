@@ -39,10 +39,13 @@ function App () {
       });
   };
 
+
+
   const loginWithGithub = () => {
-    console.log(CLIENT_ID);
-    console.log(CLIENT_SECRET);
+    // console.log(CLIENT_ID);
+    // console.log(CLIENT_SECRET);
     //window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
+
   };
   return (
     <div className="App">
