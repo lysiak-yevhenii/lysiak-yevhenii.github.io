@@ -30,15 +30,19 @@ function App () {
   const access_token_request = () => {
     const params = '?client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET + '&code=' + code;
 
-    fetch('https://github.com/login/oauth/access_token' + params, { mode: 'no-cors', method: 'POST', headers: { "Accept": "application/json" } }).then(response => {
-      return response.json();
-    }).then(data => {
-      console.log(data);
-    });
+    fetch('https://github.com/login/oauth/access_token' + params, { mode: 'no-cors', method: 'POST', headers: { "Accept": "application/json" } })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      });
   };
 
   const loginWithGithub = () => {
-    window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
+    console.log(CLIENT_ID);
+    console.log(CLIENT_SECRET);
+    //window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
   };
   return (
     <div className="App">
