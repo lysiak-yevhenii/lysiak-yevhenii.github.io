@@ -28,6 +28,7 @@ const MainPage = (props) => {
       <header>
         <div>
           <h1>Lysiak Yevhenii</h1>
+          <hr />
           <p>Profile page</p>
         </div>
         <div className={styles['social-pages-ref']}>
