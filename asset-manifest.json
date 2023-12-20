@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.34b86c32.css",
-    "main.js": "/static/js/main.8cd0d25a.js",
+    "main.css": "/static/css/main.a9d0629f.css",
+    "main.js": "/static/js/main.c10fa08c.js",
     "static/js/787.0918c8e5.chunk.js": "/static/js/787.0918c8e5.chunk.js",
     "static/media/salesforce.svg": "/static/media/salesforce.e2d602a52e2e6eeb5d9aacf1f8712042.svg",
     "static/media/youtube.svg": "/static/media/youtube.a818f6a5bd97a01c0d7b5f0422290e31.svg",
@@ -9,12 +9,12 @@
     "static/media/tiktok.svg": "/static/media/tiktok.994294c799b57b7fed6ddf38ae45a450.svg",
     "static/media/react.svg": "/static/media/react.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.34b86c32.css.map": "/static/css/main.34b86c32.css.map",
-    "main.8cd0d25a.js.map": "/static/js/main.8cd0d25a.js.map",
+    "main.a9d0629f.css.map": "/static/css/main.a9d0629f.css.map",
+    "main.c10fa08c.js.map": "/static/js/main.c10fa08c.js.map",
     "787.0918c8e5.chunk.js.map": "/static/js/787.0918c8e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34b86c32.css",
-    "static/js/main.8cd0d25a.js"
+    "static/css/main.a9d0629f.css",
+    "static/js/main.c10fa08c.js"
   ]
 }
