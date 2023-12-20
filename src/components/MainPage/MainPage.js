@@ -16,8 +16,12 @@ const content = [
   ]
 ];
 
-const MainPage = () => {
+const MainPage = (props) => {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
+
+  const app_size = props['app-size'];
+
+  const isMobile = app_size <= 480;
 
   return (
     <div className={styles.content}>
@@ -26,9 +30,11 @@ const MainPage = () => {
           <h1>Lysiak Yevhenii</h1>
           <p>Profile page</p>
         </div>
-        <a href="https://www.instagram.com/lysiak.yevhenii/"><img src={instagram_logo} alt="Instagram Logo"></img></a>
-        <a href="https://www.youtube.com/@Lysiak.Yevhenii"><img src={youtube_logo} alt="YouTube Logo"></img></a>
-        <a href="https://www.tiktok.com/@jenuaz__ua"><img src={tiktok_logo} alt="TikTok Logo"></img></a>
+        <div className={styles['social-pages-ref']}>
+          <a href="https://www.instagram.com/lysiak.yevhenii/"><img style={isMobile ? { wight: "50px", height: "30px" } : { wight: "50px", height: "50px" }} src={instagram_logo} alt="Instagram Logo"></img></a>
+          <a href="https://www.youtube.com/@Lysiak.Yevhenii"><img style={isMobile ? { wight: "50px", height: "30px" } : { wight: "50px", height: "50px" }} src={youtube_logo} alt="YouTube Logo"></img></a>
+          <a href="https://www.tiktok.com/@jenuaz__ua"><img style={isMobile ? { wight: "50px", height: "30px" } : { wight: "50px", height: "50px" }} src={tiktok_logo} alt="TikTok Logo"></img></a>
+        </div>
       </header>
 
       <div id="tabs">

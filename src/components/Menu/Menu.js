@@ -1,30 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Menu.module.css';
 import salesforce_logo from '../../salesforce.svg';
 import react_logo from '../../react.svg';
 
-const Menu = () => {
+const Menu = (props) => {
 
-  console.log(window.matchMedia('(max-width: 480px)'));
+  const app_size = props['app-size'];
 
-  const [width, setWidth] = useState(window.innerWidth);
-
-  function handleWindowSizeChange () {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
-
-  const isMobile = width <= 480;
+  const isMobile = app_size <= 480;
 
   return (
     <div className={styles.container}>
       <div className={styles.panel}>
-        <img className={styles['Salesforce-logo']} style={{ wight: "50px", height: "50px" }} src={salesforce_logo} alt="Salesforce Log" />
+        <img
+          className={styles['Salesforce-logo']}
+          style={{ wight: "50px", height: "50px" }}
+          src={salesforce_logo}
+          alt="Salesforce Log" />
         <div className={styles.hidden_panel}>
           <div className={styles.display}>
             {/* <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/qTv8lRXM6Tw" frameborder="0" allowfullscreen="" /> */}
