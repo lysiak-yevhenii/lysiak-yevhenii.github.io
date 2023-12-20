@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import styles from './MainPage.module.css';
+import instagram_logo from '../../instagram.svg';
+import youtube_logo from '../../youtube.svg';
+import tiktok_logo from '../../tiktok.svg';
 
 const content = [
   [
@@ -23,6 +26,9 @@ const MainPage = () => {
           <h1>Lysiak Yevhenii</h1>
           <p>Profile page</p>
         </div>
+        <a href="https://www.instagram.com/lysiak.yevhenii/"><img src={instagram_logo} alt="Instagram Logo"></img></a>
+        <a href="https://www.youtube.com/@Lysiak.Yevhenii"><img src={youtube_logo} alt="YouTube Logo"></img></a>
+        <a href="https://www.tiktok.com/@jenuaz__ua"><img src={tiktok_logo} alt="TikTok Logo"></img></a>
       </header>
 
       <div id="tabs">
