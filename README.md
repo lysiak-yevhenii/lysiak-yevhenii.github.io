@@ -68,3 +68,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### To make an authorization request to github
+
+<!-- const CLIENT_ID = process.env.REACT_APP_GIT_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_GIT_CLIENT_SECRET;
+const [data, setData] = useState(null);
+const [code, setCode] = useState(null);
+
+useEffect(() => {
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+setCode(urlParams.get('code'));
+console.log(code);
+}, []);
+
+const access_token_request = () => {
+const params = '?client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET + '&code=' + code;
+
+    fetch('https://github.com/login/oauth/access_token' + params, { mode: 'no-cors', method: 'POST', headers: { "Accept": "application/json" } })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      });
+
+};
+
+const loginWithGithub = () => {
+console.log(CLIENT_ID);
+console.log(CLIENT_SECRET);
+window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
+
+}; -->
+
+<!-- <button onClick={loginWithGithub}>
+ Login With Github
+</button>
+{code && <button onClick={() => access_token_request()}>
+    Access Token
+</button>} -->

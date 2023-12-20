@@ -1,76 +1,67 @@
-import logo from './logo.svg';
-import { useEffect, useState } from 'react';
+import react_logo from './react.svg';
+import salesforce_logo from './salesforce.svg';
+import { useState } from "react";
+import "./index.css";
 import './App.css';
 
-// UseEffect - run our code once at the beginning of the application 
-// useEffect(() => { }, []);
-
-
-// Forward the user to github login screen (we pass in the client ID)
-// User in now on the github side and logs in (github/login)
-// When user decides to login they get forwarded back to localhost:3000
-// But localhost:3000/?code = codehere
-// Use the code to get the access token (code can only be used once)
-
-
+const content = [
+  [
+    "[Demo]"
+  ],
+  [
+    "[Demo]"
+  ],
+  [
+    "[Demo]"
+  ]
+];
 
 function App () {
-  const CLIENT_ID = process.env.REACT_APP_GIT_CLIENT_ID;
-  const CLIENT_SECRET = process.env.REACT_APP_GIT_CLIENT_SECRET;
-  const [data, setData] = useState(null);
-  const [code, setCode] = useState(null);
+  const [activeContentIndex, setActiveContentIndex] = useState(0);
 
-  useEffect(() => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    setCode(urlParams.get('code'));
-    console.log(code);
-  }, []);
-
-  const access_token_request = () => {
-    const params = '?client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET + '&code=' + code;
-
-    fetch('https://github.com/login/oauth/access_token' + params, { mode: 'no-cors', method: 'POST', headers: { "Accept": "application/json" } })
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        console.log(data);
-      });
-  };
-
-
-
-  const loginWithGithub = () => {
-    // console.log(CLIENT_ID);
-    // console.log(CLIENT_SECRET);
-    //window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
-
-  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={loginWithGithub}>
-          Login With Github
-        </button>
-        {code && <button onClick={() => access_token_request()}>
-          Access Token
-        </button>}
-        <p>
-          Lysiak Yevhenii
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <img src={react_logo} className="App-logo" alt="logo" />
+        <img src={salesforce_logo} className="Salesforce-logo" alt="logo" />
+        <div>
+          <h1>Lysiak Yevhenii</h1>
+          <p>Profile page</p>
+        </div>
       </header>
+
+      <div id="tabs">
+        <menu>
+          <button
+            className={activeContentIndex === 0 ? "active" : ""}
+            onClick={() => setActiveContentIndex(0)}
+          >
+            Tab 1
+          </button>
+          <button
+            className={activeContentIndex === 1 ? "active" : ""}
+            onClick={() => setActiveContentIndex(1)}
+          >
+            Tab 2
+          </button>
+          <button
+            className={activeContentIndex === 2 ? "active" : ""}
+            onClick={() => setActiveContentIndex(2)}
+          >
+            Tab 3
+          </button>
+        </menu>
+        <div id="tab-content">
+          <ul>
+            {content[activeContentIndex].map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default App;
