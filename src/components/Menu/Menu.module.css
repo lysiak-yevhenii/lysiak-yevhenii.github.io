@@ -280,9 +280,43 @@
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media (min-width: 320px) and (max-width: 480px) {
+  .App-logo {
+    pointer-events: none;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+
+    .Salesforce-logo {
+      animation: 1s linear 1s infinite alternate slidein;
+    }
+  }
+
+  @keyframes slidein {
+    from {
+      /* pushes the sun down past the viewport */
+      transform: translateY(-10%);
+    }
+    to {
+      /* returns the sun to its default position */
+      transform: translateY(13%);
+    }
+  }
+
   .container {
-    width: 100%;
+    width: 100px;
     max-width: 100px;
     padding: 0 40%;
     margin: 0 auto;
@@ -297,7 +331,7 @@
 
   .panel {
     position: fixed;
-    bottom: 0%;
+    bottom: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.2);
     width: 15%;

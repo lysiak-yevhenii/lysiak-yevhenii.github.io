@@ -5,7 +5,7 @@ import react_logo from '../../react.svg';
 
 const Menu = () => {
 
-  console.log(window.matchMedia('(max-width: 767px)'));
+  console.log(window.matchMedia('(max-width: 480px)'));
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -19,7 +19,7 @@ const Menu = () => {
     }
   }, []);
 
-  const isMobile = width <= 768;
+  const isMobile = width <= 480;
 
   return (
     <div className={styles.container}>
