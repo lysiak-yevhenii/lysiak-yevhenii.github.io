@@ -8,10 +8,12 @@ code {
 }
 
 body {
+  /* Remove margin from root block */
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: sans-serif;
   background-color: #181c1f;
   color: #bdd1d4;
-  margin: 2rem;
 }
 
 header {
