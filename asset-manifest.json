@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee810968.css",
-    "main.js": "/static/js/main.424bca97.js",
+    "main.css": "/static/css/main.2b42ce92.css",
+    "main.js": "/static/js/main.bfdf6513.js",
     "static/js/787.0918c8e5.chunk.js": "/static/js/787.0918c8e5.chunk.js",
     "static/media/salesforce.svg": "/static/media/salesforce.e2d602a52e2e6eeb5d9aacf1f8712042.svg",
     "static/media/react.svg": "/static/media/react.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.ee810968.css.map": "/static/css/main.ee810968.css.map",
-    "main.424bca97.js.map": "/static/js/main.424bca97.js.map",
+    "main.2b42ce92.css.map": "/static/css/main.2b42ce92.css.map",
+    "main.bfdf6513.js.map": "/static/js/main.bfdf6513.js.map",
     "787.0918c8e5.chunk.js.map": "/static/js/787.0918c8e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee810968.css",
-    "static/js/main.424bca97.js"
+    "static/css/main.2b42ce92.css",
+    "static/js/main.bfdf6513.js"
   ]
 }
