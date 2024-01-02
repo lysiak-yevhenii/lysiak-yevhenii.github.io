@@ -23,7 +23,7 @@ const Menu = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.panel} style={!isMobile ? { top: "88px" } : { left: "16%" }}>
+      <div className={styles.panel} style={!isMobile ? { top: "88px" } : { left: "18%" }}>
         <img className={styles['App-logo']} style={{ wight: "50px", height: "42px" }} src={react_logo} alt="React Logo" />
         <div className={styles.hidden_panel}>
           <div className={styles.display}>
