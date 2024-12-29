@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { PLANET_SIZES, ORBITAL_DISTANCES, ORBITAL_SPEEDS } from '../../../utils/PlanetScales';
+import { PLANET_COLORS } from '../../../utils/PlanetColors';
 
 const Moon = ({ earthRef }) => {
     const moonRef = useRef();
@@ -15,10 +17,10 @@ const Moon = ({ earthRef }) => {
 
     return (
         <group ref={moonOrbitRef}>
-            <mesh ref={moonRef} position={[5, 0, 0]} castShadow receiveShadow>
+            <mesh ref={moonRef} position={[ORBITAL_DISTANCES.MOON, 0, 0]} castShadow receiveShadow>
                 <axesHelper args={[2]} />
-                <sphereGeometry args={[0.5, 32, 32]} />
-                <meshStandardMaterial color="grey" />
+                <sphereGeometry args={[PLANET_SIZES.MOON, 32, 32]} />
+                <meshStandardMaterial color={PLANET_COLORS.MOON}/>
             </mesh>
         </group>
     );

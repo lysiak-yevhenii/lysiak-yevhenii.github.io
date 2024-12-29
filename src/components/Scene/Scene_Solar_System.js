@@ -4,6 +4,13 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import * as THREE from 'three';
 import Sun from './Objects/Sun';
 import Earth from './Objects/Earth';
+import Mercury from "./Objects/Mercury";
+import Venus from "./Objects/Venus";
+import Mars from "./Objects/Mars";
+import Jupiter from "./Objects/Jupiter";
+import Saturn from "./Objects/Saturn";
+import Neptune from "./Objects/Neptune";
+import Uranus from "./Objects/Uranus";
 
 const LightDirection = ({ position, target }) => {
     const light = useRef();
@@ -26,7 +33,14 @@ const SolarSystem = () => {
     return (
         <> 
             <Sun ref={sunRef} /> 
+            <Mercury ref={sunRef} />
+            <Venus ref={sunRef} />
             <Earth sunRef={sunRef} ref={earthRef} /> 
+            <Mars ref={sunRef} />
+            <Jupiter ref={sunRef} />
+            <Saturn ref={sunRef} />
+            <Uranus ref={sunRef} />
+            <Neptune ref={sunRef} />
         </> 
     );
 }
