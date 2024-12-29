@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import styles from './MainPage.module.css';
 import instagram_logo from '../../instagram.svg';
 import youtube_logo from '../../youtube.svg';
 import tiktok_logo from '../../tiktok.svg';
 import salesforce_logo from '../../salesforce.svg';
+import Scene from '../Scene/Scene';
+import { Canvas, useFrame } from "@react-three/fiber"
 
 const content = [
   [
-    "[Demo]"
+    <Canvas shadows camera={{ position: [1, 1.5, 2.5], fov: 50 }}>
+         <Suspense fallback={"<div>Loading...<div/>"}>
+           <Scene />
+         </Suspense>
+    </Canvas>
   ],
   [
     "[Demo]"
@@ -64,7 +70,7 @@ const MainPage = (props) => {
         <div id="tab-content">
           <ul>
             {content[activeContentIndex].map((item) => (
-              <li key={item}>{item}</li>
+              <li key={activeContentIndex}>{item}</li>
             ))}
           </ul>
         </div>
