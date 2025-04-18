@@ -16,7 +16,7 @@ export default function App() {
       <div>
         <form action="https://go.ly-dev.work/l/1017302/2025-04-17/2vr7dg">
           Email: <br />
-          <input type="text" name="email" value="Email"></input>
+          <input type="text" name="email"></input>
           <input type="submit" value="Submit"></input>
         </form>
       </div>
