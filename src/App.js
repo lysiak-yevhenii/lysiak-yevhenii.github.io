@@ -1,32 +1,30 @@
-import react, { useEffect, useState } from "react";
-import Menu from "./components/Menu/Menu";
-import MainPage from "./components/MainPage/MainPage";
+import { Suspense, useEffect, useState, useRef } from "react"
+import { Canvas, useFrame } from "@react-three/fiber"
+import { Physics, RigidBody } from '@react-three/rapier'
+import { useAnimations, useGLTF } from "@react-three/drei"
+import Scene from "./components/Scene/Scene.js"
+import Scene_Menu from "./components/Scene/Scene_Menu.js"
+import Scene_Atom from "./components/Scene/Scene_Atom.js"
+import Scene_Solar_System from "./components/Scene/Scene_Solar_System.js"
+import './App.css'; // Import the CSS file
 
-import "./index.css";
-import "./App.css";
+export default function App() {
 
-const App = () => {
-  console.log(window.matchMedia("(max-width: 480px)"));
-
-  const [width, setWidth] = useState(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
+  // statring position for the camera
+  // shadows camera={{ position: [1, 1.5, 2.5], fov: 50 }}
   return (
-    <div>
-      {/* <Menu app-size={width} /> */}
-      <MainPage app-size={width} />
+    <div className="canvas-container">
+      <div>
+        <form action="https://go.ly-dev.work/l/1017302/2025-04-17/2vr7dg">
+          Email: <br>
+          <input type="text" name="email" value="Email">
+        </form>
+      </div>
+      <Canvas shadows>
+        <Suspense fallback={"<div>Loading...<div/>"}>
+          <Scene_Solar_System />
+        </Suspense>
+      </Canvas>
     </div>
-  );
-};
-
-export default App;
+  )
+}
