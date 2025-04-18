@@ -14,6 +14,12 @@ export default function App() {
   // shadows camera={{ position: [1, 1.5, 2.5], fov: 50 }}
   return (
     <div className="canvas-container">
+      <div>
+        <form action="https://go.ly-dev.work/l/1017302/2025-04-17/2vr7dg">
+          Email: <br>
+          <input type="text" name="email" value="Email">
+        </form>
+      </div>
       <Canvas shadows>
         <Suspense fallback={"<div>Loading...<div/>"}>
           <Scene_Solar_System />
