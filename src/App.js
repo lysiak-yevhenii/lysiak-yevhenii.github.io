@@ -21,13 +21,14 @@ export default function App() {
         </form>
       </div>
       <iframe
+        title="Pardot"
         src="https://go.ly-dev.work/l/1017302/2025-04-22/2vw5jc"
         width="100%"
         height="500"
         type="text/html"
         frameborder="0"
         allowTransparency="true"
-        style="border: 0"
+        style={{ border: 0 }}
       ></iframe>
       <div className="canvas-container">
         <Canvas shadows>
